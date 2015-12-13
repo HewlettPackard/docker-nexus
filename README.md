@@ -1,4 +1,4 @@
-# sonatype/docker-nexus
+# juguerre/docker-nexus
 
 Docker images for Sonatype Nexus with the Oracle JDK.
 
