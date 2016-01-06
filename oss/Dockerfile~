@@ -1,6 +1,11 @@
 FROM       java:8-jre
 MAINTAINER juguerre <juguerre@gmail.com>
 
+# HP corp proxy
+ENV http_proxy http://web-proxy.houston.hpecorp.net:8088
+ENV https_proxy https://web-proxy.houston.hpecorp.net:8088
+ENV no_proxy hp.com,hpqcorp.net,localhost,127.0.0.1
+
 ENV SONATYPE_WORK /sonatype-work
 ENV NEXUS_VERSION 3.0.0-b2015110601
 
@@ -41,7 +46,7 @@ ENV JAVA_MAX_MEM 768M
 ENV KARAF_OPTS -Djava.net.preferIPv4Stack=true
 
 ENV DEFAULT_JAVA_OPTS -Xms${JAVA_MIN_MEM} -Xmx${JAVA_MAX_MEM} -XX:+UnlockDiagnosticVMOptions -XX:+UnsyncloadClass 
-ENV DEFAULT_JAVA_OPTS -Xverify:none ${DEFAULT_JAVA_OPTS}
+ENV DEFAULT_JAVA_OPTS -Xverify:none ${DEFAULT_JAVA_OPTS} -Dhttp.proxyHost=web-proxy.houston.hpecorp.net -Dhttp.proxyPort=8088
 ENV JAVA_OPTS ${DEFAULT_JAVA_OPTS}
 
 ENV KARAF_HOME /opt/sonatype/nexus
