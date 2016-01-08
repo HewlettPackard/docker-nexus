@@ -1,23 +1,23 @@
-# juguerre/docker-nexus
+# HewlettPackard/docker-nexus
 
 Docker images for Sonatype Nexus with the Oracle JDK.
 
 To build:
 ```
-# docker build --rm --tag juguerre/docker-nexus oss/
+# docker build --rm --tag HewlettPackard/docker-nexus oss/
 
 ```
 
 To run (if port 8081 is open on your host):
 
 ```
-# docker run -d -p 8081:8081 --name nexus juguerre/docker-nexus
+# docker run -d -p 8081:8081 --name nexus HewlettPackard/docker-nexus
 ```
 
 or to assign a random port that maps to port 8081 on the container:
 
 ```
-# docker run -d -p 8081 --name nexus juguerre/docker-nexus
+# docker run -d -p 8081 --name nexus HewlettPackard/docker-nexus
 ```
 
 To determine the port that the container is listening on:
@@ -37,7 +37,7 @@ To build:
 Copy the Dockerfile and do the build-
 
 ```
-$ docker build --rm=true --tag=juguerre/docker-nexus .
+$ docker build --rm=true --tag=HewlettPackard/docker-nexus .
 ```
 
 
