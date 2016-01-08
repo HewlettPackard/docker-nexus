@@ -1,5 +1,5 @@
 FROM       java:8-jre
-MAINTAINER juguerre <juguerre@gmail.com>
+MAINTAINER Michael Scheetz <michael.scheetz@hpe.com>
 
 ENV SONATYPE_WORK /sonatype-work
 ENV NEXUS_VERSION 3.0.0-b2015110601
